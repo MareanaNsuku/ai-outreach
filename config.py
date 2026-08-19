@@ -1,7 +1,8 @@
 import os
 from urllib.parse import urlparse
 
-OUTPUT_DIR = "/Users/nsukumareana/Library/CloudStorage/GoogleDrive-mareanansuku@gmail.com/My Drive/AI Outreach/data"
+OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 DOMAIN_BLACKLIST = {
