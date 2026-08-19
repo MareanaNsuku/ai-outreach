@@ -4,5 +4,4 @@ venv/
 data/
 *.xlsx
 *.csv
-downloads/
 .DS_Store
