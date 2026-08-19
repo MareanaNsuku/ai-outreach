@@ -1,0 +1,7 @@
+feedparser
+tabulate
+requests
+beautifulsoup4
+lxml
+duckduckgo-search
+openpyxl
