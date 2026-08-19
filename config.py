@@ -198,3 +198,20 @@ def categorize_course(title, desc):
     return "Other AI Courses"
 def entry(title, link, desc="", src="", category=""):
     return {"title":title.strip()[:150],"link":link.strip(),"description":desc.strip()[:300],"source":src,"category":category}
+
+# ----- Fallback AI resources (used if online search returns zero) -----
+FALLBACK_JOBS = [
+    {"title": "AI Jobs Board – Remote AI Roles", "link": "https://ai-jobs.net/", "description": "Curated AI job board with remote roles.", "source": "Fallback Resource", "category": "AI/ML Engineer"},
+    {"title": "Remote OK – AI Jobs", "link": "https://remoteok.com/remote-ai-jobs", "description": "Remote AI job listings.", "source": "Fallback Resource", "category": "AI/ML Engineer"},
+    {"title": "Remotive – Remote AI Jobs", "link": "https://remotive.com/remote-jobs/ai", "description": "AI-focused remote jobs.", "source": "Fallback Resource", "category": "AI/ML Engineer"},
+    {"title": "We Work Remotely – AI Jobs", "link": "https://weworkremotely.com/categories/remote-ai-jobs", "description": "Remote AI job listings.", "source": "Fallback Resource", "category": "AI/ML Engineer"},
+    {"title": "Prompt Engineer – Remote", "link": "https://www.linkedin.com/jobs/prompt-engineer-jobs", "description": "Prompt engineering remote roles.", "source": "Fallback Resource", "category": "Prompt Writer / AI Trainer"}
+]
+
+FALLBACK_COURSES = [
+    {"title": "Google Machine Learning Crash Course", "link": "https://developers.google.com/machine-learning/crash-course", "description": "Free ML crash course with TensorFlow.", "source": "Fallback Resource", "category": "Machine Learning / AI"},
+    {"title": "fast.ai – Practical Deep Learning", "link": "https://course.fast.ai/", "description": "Free deep learning course.", "source": "Fallback Resource", "category": "Machine Learning / AI"},
+    {"title": "DeepLearning.AI – AI Courses", "link": "https://www.deeplearning.ai/courses/", "description": "Free and paid AI courses.", "source": "Fallback Resource", "category": "Machine Learning / AI"},
+    {"title": "Kaggle Learn – AI & ML", "link": "https://www.kaggle.com/learn", "description": "Free hands-on AI/ML tutorials.", "source": "Fallback Resource", "category": "Machine Learning / AI"},
+    {"title": "Class Central – AI Subject", "link": "https://www.classcentral.com/subject/ai", "description": "Free AI courses from top universities.", "source": "Fallback Resource", "category": "Machine Learning / AI"}
+]

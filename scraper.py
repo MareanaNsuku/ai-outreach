@@ -7,6 +7,7 @@ try:
 except ImportError:
     from duckduckgo_search import DDGS
 import config
+feedparser.USER_AGENT = "Mozilla/5.0 (compatible; AI-Outreach/1.0)"
 
 def fetch_rss(url):
     try:

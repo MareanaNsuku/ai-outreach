@@ -43,6 +43,8 @@ def main():
     if args.mode in ("jobs","all"):
         print("\n--- JOB SEARCH ---")
         job_items = scraper.run_jobs(extra)
+        if not job_items:
+            job_items = config.FALLBACK_JOBS
         print(f"Jobs saved: {len(job_items)}")
         cnt = collections.Counter(i["category"] for i in job_items)
         for cat, n in cnt.most_common(): print(f"  {cat:30s}: {n}")
@@ -50,6 +52,8 @@ def main():
     if args.mode in ("courses","all"):
         print("\n--- COURSE SEARCH ---")
         course_items = scraper.run_courses()
+        if not course_items:
+            course_items = config.FALLBACK_COURSES
         print(f"Courses saved: {len(course_items)}")
         cnt = collections.Counter(i["category"] for i in course_items)
         for cat, n in cnt.most_common(): print(f"  {cat:30s}: {n}")
