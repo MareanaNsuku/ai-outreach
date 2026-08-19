@@ -6,4 +6,3 @@ data/
 *.csv
 downloads/
 .DS_Store
-*.pdf
